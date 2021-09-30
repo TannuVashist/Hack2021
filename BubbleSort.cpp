@@ -20,8 +20,13 @@ void bubbleSort(int a[],int n){
     }
 }
 int main(){
-    int a[] = {3    ,   4   ,    8   ,    6   ,    7   ,    5};
-    int n = sizeof(a)/sizeof(a[0]);
+    cout<<"Enter no. of elements : ";
+    int n;
+    cin>>n;
+    int *a=new int[n];
+    for(int i=0;<n;i++)
+        cin>>a[i];
+    
     bubbleSort(a,n);
     for(int i =0;i<n;i++) cout<<a[i]<<"\t";
     return 0;
