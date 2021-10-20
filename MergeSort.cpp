@@ -47,10 +47,19 @@ void mergeSort(int a[], int l , int h){
         merge(a,l,m,h);
     }
 }
-int main(){
-    int a[] = {5,6,4,8,3,7};
-    int n = sizeof(a)/sizeof(a[0]);
+int main(){   
+    int n;
+    cout<<"Enter size of array :";
+    cin>>n;
+    
+    int *a=new int[n];
+    
+    for(int i=0;i<n;i++)
+          cin>>a[i];
+    
     mergeSort(a,0,n-1);
+    
+    cout<<"Sorted array is : ";
     for(int i =0;i<n;i++) {
         cout<<a[i]<<"\t";
     }
